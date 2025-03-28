@@ -1,1 +1,62 @@
 @import url("./global.css");
+
+.header {
+    background-color: var(--primary-color);
+}
+
+.header__navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 12px;
+    padding: 32px 0;
+}
+
+.header__logo {
+    object-fit: cover;
+    width: 100px;
+}
+
+.header__button-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__signin {
+    text-decoration: none;
+}
+
+.header__subscription {
+    background-color: var(--tertiary-color);
+    border: none;
+    border-radius: 16px;
+    padding: 8px 32px;
+}
+
+.header__text--size-sm {
+    font-size: 0.85rem;
+}
+
+.header__text--bold {
+    font-weight: bold;
+}
+
+.header__text--light {
+    color: var(--text-color);
+}
+
+.header__text--uppercase {
+    text-transform: uppercase;
+}
+
+.header__text--decoration-none {
+    text-decoration: none;
+}
+
+.header__text--space {
+    letter-spacing: 1px;
+}
