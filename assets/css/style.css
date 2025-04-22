@@ -1,7 +1,7 @@
 @import url("./global.css");
 
 .header {
-    background-color: var(--primary-color);
+    background-color: var(--nav-bg-color);
 }
 
 .header__navbar {
@@ -59,4 +59,79 @@
 
 .header__text--space {
     letter-spacing: 1px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.main__form {
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 24px;
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+.main__form-border {
+    background-color: var(--form-bg-color);
+}
+
+.main__title {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.main__title--center {
+    text-align: center;
+}
+
+.main__input {
+    padding: 16px;
+    background-color: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+
+.main__input::placeholder {
+    color: var(--form-field-placeholder);
+}
+
+.main__input:invalid {
+    border-color: var(--form-field-error);
+}
+
+.main__form__submit-block {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.main__submit-button {
+    background-image: var(--btn-bg-color-gradient);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 16px;
+    color: var(--text-color);
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.main__link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
 }

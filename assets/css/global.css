@@ -35,6 +35,11 @@
     font-family: "Raleway", sans-serif;
 }
 
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
 img {
     max-width: 100%;
 }
