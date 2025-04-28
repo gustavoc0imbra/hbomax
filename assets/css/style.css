@@ -18,7 +18,7 @@
     width: 100px;
 }
 
-.header__button-group {
+.header__buttongroup {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -34,7 +34,20 @@
     background-color: var(--tertiary-color);
     border: none;
     border-radius: 16px;
-    padding: 8px 32px;
+    padding: 6px 32px;
+    transition: background-color ease 1s, color ease 1s;
+}
+
+.header__subscription:active {
+    transition: background-color ease 1s, color ease 1s;
+    background-color: #FFF;
+    color: var(--primary-color);
+}
+
+.header__subscription:focus {
+    transition: background-color ease 1s, color ease 1s;
+    background-color: #FFF;
+    color: var(--primary-color);
 }
 
 .header__text--size-sm {
@@ -42,7 +55,7 @@
 }
 
 .header__text--bold {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .header__text--light {
