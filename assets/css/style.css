@@ -77,7 +77,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 24px;
 }
 
 .main__form {
@@ -94,17 +94,17 @@
     background-color: var(--form-bg-color);
 }
 
-.main__title {
+.form__title {
     text-transform: uppercase;
     font-size: 1.25rem;
     letter-spacing: 1px;
 }
 
-.main__title--center {
+.form__title--center {
     text-align: center;
 }
 
-.main__input {
+.form__input {
     padding: 16px;
     background-color: var(--form-field-bg-color);
     border: var(--form-field-border);
@@ -114,36 +114,44 @@
 }
 
 
-.main__input::placeholder {
+.form__input::placeholder {
     color: var(--form-field-placeholder);
 }
 
-.main__input:invalid {
+.form__input:invalid {
     border-color: var(--form-field-error);
 }
 
-.main__form__submit-block {
+.form__submitblock {
     margin-top: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
 }
 
-.main__submit-button {
-    background-image: var(--btn-bg-color-gradient);
-    background-repeat: no-repeat;
+.form__submitbutton {
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
     border: none;
-    border-radius: 16px;
+    border-radius: 24px;
     color: var(--text-color);
-    padding: 8px 16px;
+    padding: 16px 32px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 4px;
 }
 
-.main__link {
+.form__submitbutton:active {
+    /* background: var(--primary-color); */
+    background-position: 300px;
+    border: solid var(--secondary-color) 2px;
+    transform: scale(1.1);
+    transition: border ease 0.8s, transform ease 0.8s, background ease 0.8s;
+}
+
+.form__link {
     color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
