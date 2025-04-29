@@ -141,14 +141,21 @@
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 4px;
+    transition: border ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
 }
 
 .form__submitbutton:active {
-    /* background: var(--primary-color); */
-    background-position: 300px;
+    background-position: -200px;
     border: solid var(--secondary-color) 2px;
     transform: scale(1.1);
-    transition: border ease 0.8s, transform ease 0.8s, background ease 0.8s;
+    transition: border ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
+}
+
+.form__submitbutton:focus {
+    background-position: -200px;
+    border: solid var(--secondary-color) 2px;
+    transform: scale(1.1);
+    transition: border ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
 }
 
 .form__link {
@@ -196,4 +203,3 @@
 .footer__anchor-sm {
     font-size: 0.7rem;
 }
-
