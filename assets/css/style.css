@@ -19,7 +19,6 @@
 }
 
 .header__buttongroup {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,11 +50,11 @@
 }
 
 .header__text--size-sm {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
 }
 
 .header__text--bold {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .header__text--light {
@@ -75,6 +74,7 @@
 }
 
 .main {
+    background-image: url("../images/background-movies-series.png");
     display: flex;
     flex-direction: column;
     padding: 24px;
@@ -113,7 +113,6 @@
     font-size: 1rem;
 }
 
-
 .form__input::placeholder {
     color: var(--form-field-placeholder);
 }
@@ -144,18 +143,22 @@
     transition: border ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
 }
 
+.form__submitbutton:hover {
+    cursor: pointer;
+}
+
 .form__submitbutton:active {
     background-position: -200px;
-    border: solid var(--secondary-color) 2px;
+    outline: solid var(--secondary-color) 2px;
     transform: scale(1.1);
-    transition: border ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
+    transition: outline ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
 }
 
 .form__submitbutton:focus {
     background-position: -200px;
-    border: solid var(--secondary-color) 2px;
+    outline: solid var(--secondary-color) 2px;
     transform: scale(1.1);
-    transition: border ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
+    transition: outline ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
 }
 
 .form__link {
@@ -202,4 +205,19 @@
 
 .footer__anchor-sm {
     font-size: 0.7rem;
+}
+
+@media not (pointer: coarse) {
+    .header__subscription:hover {
+        transition: background-color ease 1s, color ease 1s;
+        background-color: #FFF;
+        color: var(--primary-color);
+    }
+
+    .form__submitbutton:hover {
+        background-position: -200px;
+        outline: solid var(--secondary-color) 2px;
+        transform: scale(1.1);
+        transition: outline ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
+    }
 }

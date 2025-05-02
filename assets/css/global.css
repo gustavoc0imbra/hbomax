@@ -29,7 +29,20 @@
     --form-field-error: rgb(255, 76, 76);
 
     scroll-behavior: smooth;
-  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
 
 * {
     font-family: "Raleway", sans-serif;
