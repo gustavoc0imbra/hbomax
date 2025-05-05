@@ -172,6 +172,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 64px;
+    padding: 24px;
 }
 
 .footer__nav {
@@ -190,9 +191,19 @@
     padding: 32px;
 }
 
+.footer__link {
+    color: var(--link-color);
+}
+
 .footer__anchor {
     color: var(--link-color);
     text-decoration: none;
+    transition: color ease 0.8s;
+}
+
+.footer__anchor:hover {
+    color: var(--text-color);
+    transition: color ease 0.8s;
 }
 
 .footer__anchor-uppercase {
@@ -219,5 +230,18 @@
         outline: solid var(--secondary-color) 2px;
         transform: scale(1.1);
         transition: outline ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .header__navbar {
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 12px;
+    }
+
+    .header__logo {
+        object-fit: cover;
+        width: 150px;
     }
 }
