@@ -1,6 +1,28 @@
 @import url("./global.css");
 
+.header {
+    background-color: var(--nav-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    padding: 24px;
+    position: sticky;
+    width: 100vw;
+}
+
+.header__link {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 0.80rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .main__section {
+    background: linear-gradient(-45deg, var(--secondary-color), var(--primary-color));
+    background-size: 400% 400%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +30,7 @@
     gap: 12px;
     padding: 24px;
     text-align: center;
+    animation: background_gradient 5s ease infinite alternate;
 }
 
 .main__images {
@@ -59,4 +82,16 @@
 
 .button__gradient {
     background: var(--btn-bg-color-gradient);
+}
+
+@keyframes background_gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
