@@ -59,13 +59,8 @@
 }
 
 .main__section {
-    background: linear-gradient(
-        -45deg,
-        #490cb0 0%,
-        #9b34ef 20%,
-        transparent 50%
-      );
-    background-size: 400% 400%;
+    
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,9 +68,18 @@
     gap: 24px;
     padding: 24px;
     text-align: center;
-    animation: background_gradient 10s ease infinite alternate;
 }
 
+.main__gradient {
+    background: linear-gradient(
+        -45deg,
+        #490cb0 0%,
+        #9b34ef 20%,
+        transparent 50%
+      );
+    background-size: 400% 400%;
+    animation: background_gradient 10s ease infinite alternate;
+}
 .main__images {
     display: flex;
     justify-content: center;
@@ -114,6 +118,7 @@
 
 .main__subscription::after {
     content: " /mês*";
+    color: var(--text-color);
     font-size: 1.25rem;
     font-weight: 400;
 }
@@ -137,10 +142,43 @@
 
 .button__gradient {
     background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    transition: outline ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
+}
+
+.button__gradient:hover {
+    background-position: -250px;
+    outline: solid var(--secondary-color) 2px;
+    transform: scale(1.2);
+    transition: outline ease 0.8s, transform ease 0.8s, background-position ease 0.8s;
 }
 
 .button-wiggle {
     animation: wiggle 2s linear infinite;
+}
+
+.main__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    background: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.main__text-secondary {
+    color: var(--secondary-color);
+}
+
+.main__subscriptionplan {
+    text-align: justify;
+}
+
+.main__subscriptionfeature::before {
+    content: "+";
+    margin-right: 4px;
 }
 
 @keyframes background_gradient {
