@@ -6,10 +6,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 16px;
     opacity: 1;
     padding: 24px;
     position: sticky;
+    top: 0;
     width: 100vw;
+}
+
+.header__image {
+    width: 100px;
+    object-fit: cover;
+}
+
+.header__linkgroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.header__link {
+    color: var(--btn-link-color);
+}
+
+.header__button {
+    background-color: var(--tertiary-color);
+    border-radius: 24px;
+    color: var(--btn-link-bg-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 8px 32px;
 }
 
 .header__link {
