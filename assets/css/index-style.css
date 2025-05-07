@@ -21,16 +21,21 @@
 }
 
 .main__section {
-    background: linear-gradient(-45deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(
+        -45deg,
+        #490cb0 0%,
+        #9b34ef 20%,
+        transparent 50%
+      );
     background-size: 400% 400%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px;
     padding: 24px;
     text-align: center;
-    animation: background_gradient 5s ease infinite alternate;
+    animation: background_gradient 10s ease infinite alternate;
 }
 
 .main__images {
@@ -50,10 +55,11 @@
     background: var(--divider-bg-color);
     width: 180px;
     height: 5px;
+    margin: 32px 0;
 }
 
 .main__text {
-
+    font-size: 1.25rem;
 }
 
 .main__text-md {
@@ -68,20 +74,35 @@
     text-transform: uppercase;
 }
 
+.main__subscription::after {
+    content: " /mês*";
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
 .main__button {
     border: none;
     border-radius: 24px;
     color: var(--text-color);
     font-weight: bold;
-    letter-spacing: 1.5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     padding: 8px 24px;
 }
 
+.button-xl {
+    font-size: 1.1rem;
+    padding: 16px 40px;
+}
+
 .button__gradient {
     background: var(--btn-bg-color-gradient);
+}
+
+.button-wiggle {
+    animation: wiggle 2s linear infinite;
 }
 
 @keyframes background_gradient {
@@ -93,5 +114,29 @@
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+    15% {
+        transform: rotate(-15deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(10deg);
+    }
+    35% {
+        transform: rotate(-10deg);
+    }
+    40%, 100% {
+        transform: rotate(0);
     }
 }
