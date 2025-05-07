@@ -28,6 +28,7 @@
 
 .header__link {
     color: var(--btn-link-color);
+    letter-spacing: 2px;
 }
 
 .header__button {
@@ -40,6 +41,13 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 8px 32px;
+    transition: background-color ease 0.8s;
+}
+
+.header__button:hover {
+    background-color: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+    transition: background-color ease 0.8s;
 }
 
 .header__link {
